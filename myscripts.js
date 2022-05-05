@@ -7,20 +7,18 @@ let roundWinner = '';
  let wonMessage = document.getElementById('whoWon');
  let humanScoreUpdate = document.getElementById('humanScore');
  let computerScoreUpdate = document.getElementById('computerScore');
+ let finalMessage = document.getElementById('finalMessage');
+ let openM = document.getElementById('openModal');
+ document.getElementById('playagain').addEventListener('click', ()=> closeModal());
 
 
 
 
 //player selecting
-document.getElementById('rock').onclick = function(){
-    
-}
-document.getElementById('paper').onclick = function(){
-    console.log(playRound("paper",computerPlay()));
-}
-document.getElementById('scissor').onclick = function(){
-    console.log(playRound("scissor",computerPlay()));
-}
+document.getElementById('rock').addEventListener('click', () => handleClick('rock'));
+document.getElementById('paper').addEventListener('click',() => handleClick('paper'));
+document.getElementById('scissor').addEventListener('click', () => handleClick('scissor'));
+
 
 
 //returns a random selection of rock-paper-scissor 
@@ -44,28 +42,28 @@ function playRound(playerSelection, computerSelection){
         roundWinner = "It's a Tie";
     }
     else if(playerSelection==="rock" && computerSelection==="scissor"){
-        roundWinner = "You WON! Rock breaks Scissor";
+        roundWinner = "You WON-Rock breaks Scissor";
         humanScore++;
     }
     else if(playerSelection==="rock" && computerSelection==="paper"){
-        roundWinner = "You lose :( paper consumes rock";
+        roundWinner = "You lose-paper consumes rock";
         computerScore++;
 
     }
     else if(playerSelection==="paper" && computerSelection==="rock"){
-        roundWinner = "You WON! Paper consumes rock";
+        roundWinner = "You WON-Paper consumes rock";
         humanScore++;
     }
     else if(playerSelection==="paper" && computerSelection==="scissor"){
-        roundWinner = "You lose :( scissor cuts paper";
+        roundWinner = "You lose-scissor cuts paper";
         computerScore++;
     }
     else if(playerSelection==="scissor" && computerSelection==="paper"){
-        roundWinner = "You WON! scissor cuts paper";
+        roundWinner = "You WON-scissor cuts paper";
         humanScore++;
     }
     else if(playerSelection==="scissor" && computerSelection==="rock"){
-        roundWinner = "You lose :( rock breaks scissor";
+        roundWinner = "You lose-rock breaks scissor";
         computerScore++;
     }
     updateScoreMessage(roundWinner,humanScore,computerScore);
@@ -99,14 +97,49 @@ function isGameOver(){
 }
 
 function updateScoreMessage(){
-    wonMessage = roundWinner;
+    wonMessage.textContent = roundWinner;
     humanScoreUpdate.textContent = humanScore;
     computerScoreUpdate.textContent = computerScore;     
 }
 
-function abortion(){
-    let child = document.getElementById('result');
-    if(child.hasChildNodes){
-         child.removeChild(child.firstChild);
+function handleClick(input){
+    if(isGameOver()){
+        openModal();
     }
+    const computerSelection = computerPlay();
+    playRound(input,computerSelection);
+    // updateChoices(input,computerSelection);
+    updateScoreMessage();
+    if(isGameOver()){
+        console.log('hoe');
+        openModal();
+    }
+
 }
+
+function openModal(){
+    if(humanScore===5){
+      finalMessage.textContent = "You Won";
+    }
+    else{
+        finalMessage.textContent = "Computer Won";
+    }
+    openM.classList.add('active');
+}
+
+function closeModal(){
+    openM.classList.remove('active');
+    resartGame();
+
+}
+function resartGame(){
+    humanScore = 0;
+    computerScore = 0;
+    roundWinner = '';
+    openM.classList.remove('active');
+    updateScoreMessage();
+}
+
+
+
+

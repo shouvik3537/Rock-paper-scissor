@@ -15,11 +15,12 @@
     font-size:90px;
     background-color: rgb(40, 40, 43);
     color:whitesmoke;
+    font-family: debug;
 }
 .image{
-    width:17%;
-    height: 22%;
-    margin-top: 30px;
+    width:13%;
+    height: 17%;
+    margin-top: 10px;
 }
 #imageGroup{
     display:flex;
@@ -38,4 +39,41 @@ input:hover{
     text-align: center;
 
 }
+#rounds p{
+    text-align: center;
+}
+#rounds :first-child{
+    padding-top: 5px;
+}
+#whoWon{
+    text-align: center;
+}
+.bothScore:nth-child(1){
+    position:fixed;
+    left:50%;
+}
+.openModal{
+    font-family: 'Roboto', sans-serif;
+    background-color:  rgb(40, 40, 43);
+    height: 150px;
+    width: 200px;
+    opacity: 0;
+    color: whitesmoke;
+    font-size: 20px;
+    position: fixed;
+    left: 40%;
+    top: 40%;
 
+}
+.finalMessage{
+    text-align: center;
+    padding : 20px;
+    
+}
+#playagain{
+    align-items: center;
+    
+}
+.active {
+    opacity: 1;
+}
