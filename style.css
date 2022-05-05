@@ -12,7 +12,7 @@
     width:100%;
     height: fit-content;
     text-align: center;
-    font-size:120px;
+    font-size:90px;
     background-color: rgb(40, 40, 43);
     color:whitesmoke;
 }
@@ -32,3 +32,10 @@ input:hover{
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     text-align: center; 
 }
+.resultStyle{
+    font-size: 20px;
+    padding: 20px;
+    text-align: center;
+
+}
+
