@@ -18,8 +18,8 @@
     font-family: debug;
 }
 .image{
-    width:13%;
-    height: 17%;
+    height:9%;
+    width: 12%;
     margin-top: 10px;
 }
 #imageGroup{
@@ -48,10 +48,7 @@ input:hover{
 #whoWon{
     text-align: center;
 }
-.bothScore:nth-child(1){
-    position:fixed;
-    left:50%;
-}
+
 .openModal{
     font-family: 'Roboto', sans-serif;
     background-color:  rgb(40, 40, 43);
@@ -66,6 +63,7 @@ input:hover{
 
 }
 .finalMessage{
+    font-family: 'Roboto', sans-serif;
     text-align: center;
     padding : 20px;
     
@@ -76,4 +74,23 @@ input:hover{
 }
 .active {
     opacity: 1;
+}
+.sideScore{
+    font-family: 'Roboto', sans-serif;
+}
+#userOutputImage, #computerOutputImage  {
+    height:7%;
+    width: 10%;
+}
+.outputImage {
+    display: flex;
+    flex-direction: row;
+    gap:2%;
+    justify-content: center;
+    align-items: center;
+}
+.bothScore{
+    position:fixed;
+    left: 20px;
+    top: 150px;
 }

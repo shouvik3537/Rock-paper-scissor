@@ -10,6 +10,8 @@ let roundWinner = '';
  let finalMessage = document.getElementById('finalMessage');
  let openM = document.getElementById('openModal');
  document.getElementById('playagain').addEventListener('click', ()=> closeModal());
+ let userOutputImage = document.getElementById('userOutputImage');
+ let computerOutputImage = document.getElementById('computerOutputImage');
 
 
 
@@ -108,10 +110,11 @@ function handleClick(input){
     }
     const computerSelection = computerPlay();
     playRound(input,computerSelection);
-    // updateChoices(input,computerSelection);
+    updateChoices(input,computerSelection);
+    console.log(input);
+    console.log(computerSelection);
     updateScoreMessage();
     if(isGameOver()){
-        console.log('hoe');
         openModal();
     }
 
@@ -140,6 +143,24 @@ function resartGame(){
     updateScoreMessage();
 }
 
+function updateChoices(input,computerSelection){
+    switch(input){
+        case 'rock' : userOutputImage.src = "images/rock.webp";
+        break;
+        case 'paper' : userOutputImage.src = "images/hand.png";
+        break;
+        case 'scissor' : userOutputImage.src = "images/scissor.webp";
+        break;
+    }
+    switch(computerSelection){
+        case 'rock' : computerOutputImage.src = "images/rock.webp";
+        break;
+        case 'paper' : computerOutputImage.src = "images/hand.png";
+        break;
+        case 'scissor' : computerOutputImage.src = "images/scissor.webp";
+        break;
+    }
+}
 
 
 

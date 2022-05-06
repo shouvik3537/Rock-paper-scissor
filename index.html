@@ -15,33 +15,37 @@
 <body>
     <div class="maincontainer">
         <div class="header" id="header">Rock-Paper-Scissor</div>
- 
+        <div class="container"></div>
               <div id="rounds">
                   <p>select your choice</p>
                   <p>First to score 5 points wins the Game</p>
               </div>
-
-        <div id="imageGroup">
-                <input class="image" id="rock" aria-valuetext="rock" type="image" src="images/rock.webp">
-                <input class="image" id="paper" aria-valuetext="paper" type="image" src="images/hand.png">
-                <input class="image" id="scissor" aria-valuetext="scissor" type="image" src="images/scissor.webp">
+                 <div id="imageGroup">
+                         <input class="image" id="rock" aria-valuetext="rock" type="image" src="images/rock.webp">
+                         <input class="image" id="paper" aria-valuetext="paper" type="image" src="images/hand.png">
+                         <input class="image" id="scissor" aria-valuetext="scissor" type="image" src="images/scissor.webp">
+                 </div>
+                 <div class="outputImage">
+                     <img src="" alt="" id="userOutputImage">
+                     <img src="" alt="" id="computerOutputImage">
+                 </div>
+                <div class="sideScore">
+                        <div class="bothScore">
+                            <p>Scores</p>
+                            <span>YOU- </span><span id="humanScore">0</span><span>&nbsp</span>
+                            <span>COMPUTER- </span><span id="computerScore">0</span>
+                        </div>
+                </div>
+                 <p id="whoWon"></p>
+                 
+                 <div id="openModal" class="openModal">
+                     <p id="finalMessage"></p>
+                     <input type="button" id="playagain" value="Play Again">
+                 </div>
+    
         </div>
-        <br>
-        <div class="sideScore">
-            <p id="whoWon"></p>
-            <div class="bothScore">
-                <p>Scores</p>
-                <span>YOU- </span><span id="humanScore">0</span>
-                <span>COMPUTER- </span><span id="computerScore">0</span>
-            </div>
-        </div>
-        
-        <div id="openModal" class="openModal">
-            <p id="finalMessage"></p>
-            <input type="button" id="playagain" value="Play Again">
-        </div>
-
     </div>
+
     <script src="myscripts.js"></script>
 </body>
 </html>
