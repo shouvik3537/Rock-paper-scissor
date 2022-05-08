@@ -144,8 +144,8 @@ function resartGame(){
     computerScore = 0;
     roundWinner = '';
     openM.classList.remove('active');
-    userOutputImage.src = "images/rock.webp";
-    computerOutputImage.src = "images/rock.webp";
+    userOutputImage.src = "images/1574339.png";
+    computerOutputImage.src = "images/1574339.png";
     updateScoreMessage();
 }
 

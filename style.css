@@ -181,6 +181,18 @@ input:hover{
     height:12%;
     width: 15%;
 }
+.bothScore{
+    position:absolute;
+    left:30%;
+    top:77%;
+    text-align: center;
+    width: fit-content;
+}
+.footer{
+    position: fixed;
+    left: 20%;
+    bottom:5px;
+}
 
 
  }
