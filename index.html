@@ -10,12 +10,17 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+<link rel="shortcut icon" href="favicon.ico" />
+<script
+  src="https://kit.fontawesome.com/4c536a6bd5.js"
+  crossorigin="anonymous"
+></script>
 
 </head>
 <body>
     <div class="maincontainer">
         <div class="header" id="header">Rock-Paper-Scissor</div>
-        <div class="container"></div>
+        
               <div id="rounds">
                   <p>select your choice</p>
                   <p>First to score 5 points wins the Game</p>
@@ -25,10 +30,14 @@
                          <input class="image" id="paper" aria-valuetext="paper" type="image" src="images/hand.png">
                          <input class="image" id="scissor" aria-valuetext="scissor" type="image" src="images/scissor.webp">
                  </div>
+                 <br>
                  <div class="outputImage">
-                     <img src="" alt="" id="userOutputImage">
-                     <img src="" alt="" id="computerOutputImage">
+                     <span class="imgInfo">You -</span><img src="images/1574339.png" alt="" id="userOutputImage">
+                     <span class="imgInfo">Computer -</span><img src="images/1574339.png" alt="" id="computerOutputImage">
                  </div>
+                 <div class="wonMessage">
+                    <p id="whoWon" class="whoWon"></p>
+                   </div>
                 <div class="sideScore">
                         <div class="bothScore">
                             <p>Scores</p>
@@ -36,14 +45,21 @@
                             <span>COMPUTER- </span><span id="computerScore">0</span>
                         </div>
                 </div>
-                 <p id="whoWon"></p>
-                 
+                
                  <div id="openModal" class="openModal">
                      <p id="finalMessage"></p>
-                     <input type="button" id="playagain" value="Play Again">
+                     <input type="button" id="playagain" class="playbtn" value="Play Again">
                  </div>
+                 <div id="overlay" class="overlay"></div>
+
     
         </div>
+    </div>
+    <div class="footer">
+        <span>Made With &#x2764 by shouvik</span>
+        <a href="https://github.com/shouvik3537" target="_blank">
+            <i class="fab fa-github fa-lg spin"></i
+          ></a>
     </div>
 
     <script src="myscripts.js"></script>

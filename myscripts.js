@@ -12,6 +12,7 @@ let roundWinner = '';
  document.getElementById('playagain').addEventListener('click', ()=> closeModal());
  let userOutputImage = document.getElementById('userOutputImage');
  let computerOutputImage = document.getElementById('computerOutputImage');
+ let overlay = document.getElementById('overlay');
 
 
 
@@ -122,16 +123,19 @@ function handleClick(input){
 
 function openModal(){
     if(humanScore===5){
-      finalMessage.textContent = "You Won";
+      finalMessage.textContent = "You Won the Match!";
     }
     else{
-        finalMessage.textContent = "Computer Won";
+        finalMessage.textContent = "You Lost,Computer Won!";
     }
     openM.classList.add('active');
+    overlay.classList.add('active');
+
 }
 
 function closeModal(){
     openM.classList.remove('active');
+    overlay.classList.remove('active');
     resartGame();
 
 }
@@ -140,6 +144,8 @@ function resartGame(){
     computerScore = 0;
     roundWinner = '';
     openM.classList.remove('active');
+    userOutputImage.src = "images/rock.webp";
+    computerOutputImage.src = "images/rock.webp";
     updateScoreMessage();
 }
 

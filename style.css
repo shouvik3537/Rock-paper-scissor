@@ -6,9 +6,10 @@
     padding: 0px;
     padding:0px;
     box-sizing: border-box;
-    font-family: debug;
+    
 }
 .header{
+    font-family: debug;
     width:100%;
     height: fit-content;
     text-align: center;
@@ -18,8 +19,8 @@
     font-family: debug;
 }
 .image{
-    height:9%;
-    width: 12%;
+    height:7%;
+    width: 10%;
     margin-top: 10px;
 }
 #imageGroup{
@@ -34,53 +35,61 @@ input:hover{
     text-align: center; 
 }
 .resultStyle{
+    font-family: debug;
     font-size: 20px;
     padding: 20px;
     text-align: center;
 
 }
-#rounds p{
+#rounds {
+    font-size: 20px;
+    padding-top: 10px;
+    font-family: debug;
     text-align: center;
 }
 #rounds :first-child{
     padding-top: 5px;
 }
 #whoWon{
+    font-family: debug;
     text-align: center;
 }
-
+/* Modal Design */
 .openModal{
     font-family: 'Roboto', sans-serif;
-    background-color:  rgb(40, 40, 43);
-    height: 150px;
-    width: 200px;
-    opacity: 0;
-    color: whitesmoke;
-    font-size: 20px;
     position: fixed;
-    left: 40%;
-    top: 40%;
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+    width: 320px;
+    padding: 30px;
+    border-radius: 10px;
+    background-color: rgb(40, 40, 43);
+    color: whitesmoke;
+    text-align: center;
+    font-size: 30px;
+    user-select: none;
+    transform: translate(-50%, -50%) scale(0);
+    transition: 200ms ease-in-out;
 
 }
-.finalMessage{
-    font-family: 'Roboto', sans-serif;
-    text-align: center;
-    padding : 20px;
-    
-}
+.openModal.active {
+    transform: translate(-50%, -50%) scale(1);
+  }
 #playagain{
-    align-items: center;
-    
+    border-radius:5px;
+    padding:5px;   
 }
-.active {
-    opacity: 1;
+.playbtn:hover{
+    background-color: #4c8bf5;
+    color:rgb(40, 40, 43);
 }
-.sideScore{
-    font-family: 'Roboto', sans-serif;
-}
+
+
+/* Output Image */
 #userOutputImage, #computerOutputImage  {
-    height:7%;
-    width: 10%;
+    height:6%;
+    width: 8%;
 }
 .outputImage {
     display: flex;
@@ -90,7 +99,88 @@ input:hover{
     align-items: center;
 }
 .bothScore{
+    font-family: debug;
+    background-color: rgb(40, 40, 43,.60);
     position:fixed;
     left: 20px;
     top: 150px;
+    border :1px solid rgb(40, 40, 43);
+    padding: 20px;
+    border-radius: 4px;
+    font-size: 25px;
 }
+
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 0.6;
+  }
+  
+  .overlay.active {
+    display: block;
+  }
+.wonMessage{
+    display: flex;
+    justify-content: center;
+}
+
+  .whoWon{
+      margin-top: 30px;
+      background-color: rgb(40, 40, 43,.60);
+      border-radius: 5px;
+      font-size: 25px;
+      padding:10px;
+      width: fit-content;
+      height: fit-content;
+     
+  }
+  .imgInfo{
+    font-family: debug;
+
+  }
+  .footer{
+      font-size: 16px;
+      position: fixed;
+      left:45%;
+      bottom:1px;
+  }
+
+  .spin{
+    transition: transform 0.3s ease-in-out;;
+  }
+  .spin:hover{
+      transform: rotate(360deg) scale(1.2);
+  }
+  /* MEDIA QUERIES */
+ @media (max-width:550px){
+.header{
+    font-size:25px;
+}
+#rounds{
+    font-size: 15px;
+}
+.bothScore{
+    font-size: 8px;
+}
+.image{
+    height: 14%;
+    width: 17%;
+}
+.whoWon{
+    font-size: 15px;
+}
+.outputImage span{
+    font-size: 12px;
+}
+#userOutputImage, #computerOutputImage  {
+    height:12%;
+    width: 15%;
+}
+
+
+ }
