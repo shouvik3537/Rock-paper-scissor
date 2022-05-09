@@ -42,8 +42,8 @@ input:hover{
 
 }
 #rounds {
-    font-size: 20px;
-    padding-top: 10px;
+    font-size: 15px;
+    padding-top: 5px;
     font-family: debug;
     text-align: center;
 }
@@ -103,7 +103,7 @@ input:hover{
     background-color: rgb(40, 40, 43,.60);
     position:fixed;
     left: 20px;
-    top: 150px;
+    top: 140px;
     border :1px solid rgb(40, 40, 43);
     padding: 20px;
     border-radius: 4px;
