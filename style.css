@@ -13,7 +13,7 @@
     width:100%;
     height: fit-content;
     text-align: center;
-    font-size:90px;
+    font-size:85px;
     background-color: rgb(40, 40, 43);
     color:whitesmoke;
     font-family: debug;
@@ -107,7 +107,7 @@ input:hover{
     border :1px solid rgb(40, 40, 43);
     padding: 20px;
     border-radius: 4px;
-    font-size: 25px;
+    font-size: 20px;
 }
 
 .overlay {
@@ -133,7 +133,7 @@ input:hover{
       margin-top: 30px;
       background-color: rgb(40, 40, 43,.60);
       border-radius: 5px;
-      font-size: 25px;
+      font-size: 20px;
       padding:10px;
       width: fit-content;
       height: fit-content;
@@ -184,7 +184,7 @@ input:hover{
 .bothScore{
     position:absolute;
     left:30%;
-    top:77%;
+    top:74%;
     text-align: center;
     width: fit-content;
 }
